@@ -6,7 +6,7 @@ export async function getSalas(req, res) {
 }
 
 
-export async function postSala(req, res) {
+export async function postSalas(req, res) {
     try {
         const sala = req.body;
 
