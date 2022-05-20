@@ -1,0 +1,2 @@
+MONGO_URL=mongodb+srv://hackathon:7008c3ae2935448bbd67cd35a816864f@hackathon.uy4n4.mongodb.net/?retryWrites=true&w=majority
+PORT=5000

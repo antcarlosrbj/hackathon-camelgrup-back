@@ -8,7 +8,7 @@ const mongoClient = new MongoClient(process.env.MONGO_URL);
 
 try{
     await mongoClient.connect();
-    db = mongoClient.db("Hackathon");
+    db = mongoClient.db("dbRespondeAqui");
 } catch (error) {
     console.log(error);
 }
