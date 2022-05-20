@@ -9,6 +9,7 @@ const mongoClient = new MongoClient(process.env.MONGO_URL);
 try{
     await mongoClient.connect();
     db = mongoClient.db("dbRespondeAqui");
+    console.log('Banco de Dados Conectado');
 } catch (error) {
     console.log(error);
 }
