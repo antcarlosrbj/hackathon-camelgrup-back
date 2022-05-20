@@ -1,9 +1,10 @@
 import express from "express";
 
-import { getPerguntas } from "../controllers/salaController.js";
+import { getPerguntas, postPerguntas } from "../controllers/salaController.js";
 
 const salaRouter = express.Router();
 
 salaRouter.get("/sala", getPerguntas);
+salaRouter.post("/sala", postPerguntas);
 
 export default salaRouter;
