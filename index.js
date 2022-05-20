@@ -2,7 +2,8 @@ import express from 'express';
 import dotenv from "dotenv";
 import cors from 'cors';
 
-import salaRouter from "./controllers/sala/getPerguntas.js";
+import salaRouter from "./routers/salaRouter.js";
+
 dotenv.config();
 
 const app = express();

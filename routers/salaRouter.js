@@ -1,6 +1,6 @@
-import express from 'express';
+import express from "express";
 
-import getPerguntas from "../controllers/sala/getPerguntas.js";
+import { getPerguntas } from "../controllers/salaController.js";
 
 const salaRouter = express.Router();
 
