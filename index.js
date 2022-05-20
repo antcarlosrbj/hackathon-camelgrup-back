@@ -4,6 +4,7 @@ import cors from "cors";
 
 import salaRouter from "./routers/salaRouter.js";
 import homeRouter from "./routers/homeRouter.js";
+import authRouter from "./routers/authRouter.js";
 
 dotenv.config();
 
@@ -13,6 +14,7 @@ app.use(express.json());
 
 app.use(salaRouter);
 app.use(homeRouter);
+app.use(authRouter);
 
 const port = process.env.PORT;
 app.listen(port, () => {

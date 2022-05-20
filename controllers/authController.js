@@ -2,7 +2,7 @@ import joi from 'joi';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 
-import db from "./db.js";
+import db from "../db.js";
 
 export async function signUp(req, res) {
     try {
@@ -13,7 +13,8 @@ export async function signUp(req, res) {
         const userSchema = joi.object({
             name: joi.string().required(),
             email: joi.string().email().required(),
-            password: joi.string().required().min(8)
+            password: joi.string().required().min(8),
+            type: joi.string().valid("aluno", "professor").required()
         });
 
         const validation = userSchema.validate(user);
