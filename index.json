@@ -1,36 +1,5 @@
 {
-	"_id": {
-		"$oid": "628811db7eed1f48adbf4d78"
-	},
-	"id_sala": "12345",
-	"perguntas": [
-		{
-			"autor": "id_autor1",
-			"titulo": "Ta funcionando?",
-			"respostas": [
-				{
-					"autor_resposta": "id_autor_resposta1",
-					"resposta": "sim"
-				},
-				{
-					"autor_resposta": "id_autor_resposta2",
-					"resposta": "nao"
-				}
-			]
-		},
-		{
-			"autor": "id_autor1",
-			"titulo": "Funcionando está?",
-			"resposta": [
-				{
-					"autor_resposta": "id_autor_resposta1",
-					"resposta": "sim"
-				},
-				{
-					"autor_resposta": "id_autor_resposta2",
-					"resposta": "nao"
-				}
-			]
-		}
-	]
+	"nome_sala": "Sala1",
+	"usuario_criador": "id_usuario_criador",
+	"sala": { "$oid": "628811db7eed1f48adbf4d78" }
 }
