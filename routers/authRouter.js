@@ -10,7 +10,7 @@ authRouter.post("/sign-up", signUp);
 authRouter.post("/login", login);
 authRouter.get("/login", validateToken);
 authRouter.get("/", (req, res) => {
-    res.send("Hello World");
+    res.send("Eaeeee");
 });
 
 export default authRouter;
