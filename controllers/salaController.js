@@ -37,14 +37,34 @@ export async function postPergunta(req, res) {
 
 export async function postResposta(req, res) {
     try {
-        /* const pergunta = req.body; */
+        const {id} = req.body;
+        const pergunta = Number(req.body.pergunta);
+
+        const resposta = {
+            autor_resposta: req.body.autor_resposta,
+            resposta: req.body.resposta
+        };
 
         //TODO: JOI verification
 
-        /* await db.collection('sala').insertOne(pergunta); */
-        res.sendStatus(201);
+        const sala = await db.collection('home').find({ _id: ObjectId(id)}).toArray();
+
+
+       /*  await db.collection('home').updateOne(
+            { _id: ObjectId(id)},
+            
+            {
+                $set: {
+                  respostas: [...sala[0].perguntas[req.body.pergunta], resposta]
+                },
+            },
+            
+            { upsert: true }
+        ); */
+
+        res.send(sala[0].perguntas[pergunta].respostas);
 
     } catch (error) {
-        console.log(`postResposta error: ${error}`)
+        console.log(`postPergunta error: ${error}`)
     }
 }
