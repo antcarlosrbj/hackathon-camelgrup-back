@@ -6,7 +6,6 @@ export async function postPergunta(req, res) {
         const {id} = req.body;
 
         const pergunta = {
-            autor: req.body.autor,
             titulo: req.body.titulo,
             respostas: []
         };
