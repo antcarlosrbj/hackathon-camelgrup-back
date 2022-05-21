@@ -6,6 +6,6 @@ const homeRouter = express.Router();
 
 homeRouter.get("/", getSalas);
 homeRouter.post("/", getSalas);
-homeRouter.post("/", postSalas);
+homeRouter.post("/new", postSalas);
 
 export default homeRouter;

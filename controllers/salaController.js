@@ -5,31 +5,23 @@ export async function postPergunta(req, res) {
     try {
         const {id} = req.body;
 
-        /* const pergunta = {
+        const pergunta = {
             autor: req.body.autor,
             titulo: req.body.titulo,
-            "respostas":[
-                {
-                    "autor_resposta":"id_autor_resposta1",
-                    "resposta":"sim"
-                },
-                {
-                    "autor_resposta":"id_autor_resposta2",
-                    "resposta":"nao"
-                }
-            ]
-        }, */
+            respostas: []
+        };
 
         //TODO: JOI verification
 
-        /* const sala = await db.collection('home').find({ _id: ObjectId(id)}).toArray(); */
+        const sala = await db.collection('home').find({ _id: ObjectId(id)}).toArray();
+
 
         await db.collection('home').updateOne(
             { _id: ObjectId(id)},
             
             {
                 $set: {
-                  perguntas: []
+                  perguntas: [...sala[0].perguntas, pergunta]
                 },
             },
             
